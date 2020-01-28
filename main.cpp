@@ -6,7 +6,8 @@
 	Keeping Dr. McMillan from breaking my code, defend against "dark side of the force",
 	and/or legitimate user error. 
 	//Try and Catch blocks are used in error checking
-	Teacher: Dr. Tyson McMillan, Ph.D.  
+	Teacher: Dr. Tyson McMillan, Ph.D. 
+  Student: Thomas Hammer 
 */
 #include <cstdlib>  // Provides EXIT_SUCCESS
 #include <iostream>  // Provides cout, cerr, endl
@@ -19,9 +20,37 @@ using namespace std;
 int main()
 {
    //***********Validating int data type******************/
-	int input = 0;
-	input = validateInt(input); //validate my integer by function call, save that value into input
-    cout << "You entered valid int: " << input << endl;
+	int n = 0; //declare and initialize the variable
+  //accept input into n
+cout << "Plese enter a number >";
+cin >> n;
+//Processing with loops
+while(n > 0) //while "n" is less than 0, keep looping 
+{
+  cout << n << ", " << endl; // print current val of n,....exitpoint
+  --n;
+}
+cout << "FiRE!" << endl;
+
+//prefix vs. postfix increment (++) or decrement (--)
+int a = 0, b = 3;
+a=++b;
+cout << "a=" << a << "b=" << b;
+//reset values
+a = 0, b = 3;
+a=b++;
+cout << "a=" << a << "b=" << b << endl;
+//a contains 4, b contains 4 
+ //processing do-while loop
+ unsigned int z = 1;
+ do // all of this
+ {
+cout << "Enter number (0 to end ) " ;
+cin >> z;
+cout << "You entered: " << z << "/n" ;
+ }while(z != 0); // while has the ;
+	n = validateInt(n); //validate my integer by function call, save that value into input
+    cout << "You entered valid int: " << n << endl;
     
 	/****************Extend code to Validate double (follow int pattern)**********/
 	double inputDouble = 0.0;
